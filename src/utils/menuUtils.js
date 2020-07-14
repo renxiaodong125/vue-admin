@@ -22,7 +22,6 @@ export function generateMenuTree(data) {
       hidden:item.hiddenFlag === '1',
       menuSort:item.menuSort
     }
-
     menudata.push(menuItem)
   })
 
