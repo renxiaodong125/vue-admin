@@ -1,5 +1,6 @@
 <template>
-  <div v-if="!item.hidden">
+  <div v-if="!item.hidden" class="menu-wrapper">
+
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
       <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
         <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
@@ -21,6 +22,7 @@
         class="nest-menu"
       />
     </el-submenu>
+
   </div>
 </template>
 
@@ -85,9 +87,6 @@ export default {
     resolvePath(routePath) {
       if (isExternal(routePath)) {
         return routePath
-      }
-      if (isExternal(this.basePath)) {
-        return this.basePath
       }
       return path.resolve(this.basePath, routePath)
     },

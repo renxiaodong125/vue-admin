@@ -64,7 +64,7 @@ const actions = {
           ].concat(menuRouters.length >0 ? menuRouters : [])
 
           if (roles.includes('admin')) {
-            accessedRoutes = menuRouters.length >0 ? menuRouters : []
+            accessedRoutes = asyncRoutes.length >0 ? asyncRoutes : []
           } else {
             accessedRoutes = filterAsyncRoutes(menuRouters, roles)
           }

@@ -64,7 +64,7 @@ const actions = {
 
         commit('SET_ROLES', roles)
         commit('SET_NAME', name)
-        commit('SET_AVATAR', avatar)
+        commit('SET_AVATAR', "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif")//TODO待后台传输动态值 即可 
         commit('SET_INTRODUCTION', introduction)
         resolve(response)
       }).catch(error => {

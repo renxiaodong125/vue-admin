@@ -5,8 +5,7 @@ import Cookies from 'js-cookie'
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
 import Element from 'element-ui'
-
-import './assets/iconfont/iconfont.css'
+import './assets/sign_icons/iconfont.css'
 
 import './styles/element-variables.scss'
 

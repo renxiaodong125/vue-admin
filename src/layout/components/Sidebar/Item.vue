@@ -17,9 +17,12 @@ export default {
     const vnodes = []
 
     if (icon) {
-      vnodes.push(<svg-icon icon-class={icon}/>)
+      if(icon.includes("sign")){
+        vnodes.push(<div class='sign-icon' style="margin-right:15px;display:inline-block"><span class={icon}></span></div>)
+      }else{
+        vnodes.push(<svg-icon icon-class={icon}/>)
+      }
     }
-
     if (title) {
       vnodes.push(<span slot='title'>{(title)}</span>)
     }
